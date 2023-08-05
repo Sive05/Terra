@@ -28,11 +28,9 @@ jobs:
           terraform_wrapper: false
 
       - name: Terraform Init
-        id: init
         run: terraform init
 
       - name: Terraform Plan
-        id: plan
         run: terraform plan
 
 
@@ -59,11 +57,9 @@ jobs:
           terraform_wrapper: false
 
       - name: Terraform Init
-        id: init
         run: terraform init
 
       - name: Terraform Apply
-        id: Apply
         run: terraform apply --auto-approve
 
 
@@ -89,9 +85,7 @@ jobs:
           terraform_wrapper: false
 
       - name: Terraform Init
-        id: init
         run: terraform init
 
       - name: Terraform Destroy
-        id: Destroy
         run: terraform apply -destroy
