@@ -70,7 +70,7 @@ jobs:
   Terraform_Destroy:
     name: "Terraform_Destroy"
     runs-on: ubuntu-latest
-    needs: [Terraform_Plan]
+    needs: [Terraform_Apply]
     environment: Destroy
     env:
       AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
