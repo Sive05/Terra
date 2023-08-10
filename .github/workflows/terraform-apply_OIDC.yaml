@@ -1,4 +1,4 @@
-name: "Terraform"
+name: "Terraform_OIDC"
 
 on:
   push:
@@ -22,6 +22,7 @@ jobs:
         uses: aws-actions/configure-aws-credentials@v2
         with:
           role-to-assume: arn:aws:iam::137150604440:role/RoleForGitHub
+          aws-region: eu-west-1
 
       - name: Setup Terraform
         uses: hashicorp/setup-terraform@v1
